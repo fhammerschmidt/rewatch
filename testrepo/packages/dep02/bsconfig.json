@@ -9,5 +9,8 @@
     "in-source": true
   },
   "suffix": ".bs.js",
-  "bs-dependencies": []
+  "bs-dependencies": [
+    "@rescript/react",
+    "rescript-material-ui"
+  ]
 }

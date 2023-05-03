@@ -12,6 +12,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "rescript": "*"
+    "@rescript/react": "^0.11.0",
+    "rescript": "*",
+    "rescript-material-ui": "^3.0.2"
   }
 }
