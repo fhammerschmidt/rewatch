@@ -92,7 +92,7 @@ pub fn change_extension(path: &str, new_extension: &str) -> String {
 }
 
 /// Capitalizes the first character in s.
-fn capitalize(s: &str) -> String {
+pub fn capitalize(s: &str) -> String {
     let mut c = s.chars();
     match c.next() {
         None => String::new(),
@@ -105,7 +105,7 @@ fn capitalize(s: &str) -> String {
 pub fn file_path_to_compiler_asset_basename(path: &str, namespace: &Option<String>) -> String {
     let base = get_basename(path);
     match namespace {
-        Some(namespace) => base.to_string() + "-" + &namespace,
+        Some(namespace) => base.to_string() + "-" + capitalize(&namespace.as_str()).as_str(),
         None => base,
     }
 }

@@ -660,7 +660,10 @@ pub fn compile_file(
         .collect::<Vec<Vec<String>>>();
 
     let namespace_args = match module.package.namespace.to_owned() {
-        Some(namespace) => vec!["-bs-ns".to_string(), namespace],
+        Some(namespace) => vec![
+            "-bs-ns".to_string(),
+            helpers::capitalize(namespace.as_str()),
+        ],
         None => vec![],
     };
 
